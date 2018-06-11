@@ -15,7 +15,8 @@ class MysqlCnfParserTest extends TestCase
 
     public function testParseCndWithIncludeFile()
     {
-        $output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfWithoutIncludes.cnf");
+        $output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfWithIncludeFile.cnf");
+        $this->assertArrayHasKey("included", $output);
     }
 
 }

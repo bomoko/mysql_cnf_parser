@@ -21,10 +21,30 @@ class MysqlCnfParser
                 }
             }
 
-            return parse_ini_string(implode("\n", $toParse), true);
-
+            return array_merge_recursive(
+              parse_ini_string(implode("\n", $toParse), true),
+              self::processIncludes($includes,
+                realpath(pathinfo($filename, PATHINFO_DIRNAME))));
         }
 
+    }
+
+    protected static function processIncludes(Array $includes, $includePath)
+    {
+        $return = [];
+
+        foreach ($includes as $include) {
+            //strip any !include(s)
+            $names = explode(" ", $include);
+            $name = $names[1];
+            if ($name[0] !== "/") {
+                $name = $includePath . "/{$name}";
+            }
+            if (file_exists($name) && file_exists($name)) {
+                $return = array_merge_recursive($return, self::parse($name));
+            }
+        }
+        return $return;
     }
 
 }
