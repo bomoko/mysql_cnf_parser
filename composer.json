@@ -1,0 +1,15 @@
+{
+    "name": "bomoko/mysql_cnf_parser",
+    "description": ".cnf parser",
+    "type": "library",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "bomoko\\MysqlCnfParser\\": "src/"
+      }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3@dev"
+    }
+}
