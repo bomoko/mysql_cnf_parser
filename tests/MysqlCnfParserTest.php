@@ -6,11 +6,16 @@ use bomoko\MysqlCnfParser\MysqlCnfParser;
 class MysqlCnfParserTest extends TestCase
 {
 
-  public function testParseCnfWithoutIncludes()
-  {
-		$output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfWithoutIncludes.cnf");
-	  $this->assertTrue(is_array($output));
-		$this->assertArrayHasKey("client", $output);
-  }
+    public function testParseCnfWithoutIncludes()
+    {
+        $output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfWithoutIncludes.cnf");
+        $this->assertTrue(is_array($output));
+        $this->assertArrayHasKey("client", $output);
+    }
+
+    public function testParseCndWithIncludeFile()
+    {
+        $output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfWithoutIncludes.cnf");
+    }
 
 }
