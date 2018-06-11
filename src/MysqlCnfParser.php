@@ -40,7 +40,7 @@ class MysqlCnfParser
             if ($name[0] !== "/") {
                 $name = $includePath . "/{$name}";
             }
-            if (file_exists($name) && file_exists($name)) {
+            if (file_exists($name) && is_readable($name)) {
                 $return = array_merge_recursive($return, self::parse($name));
             }
         }
