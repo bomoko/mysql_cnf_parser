@@ -1,5 +1,5 @@
 {
-    "name": "bomoko/mysql_cnf_parser",
+    "name": "bomoko/mysql-cnf-parser",
     "description": ".cnf parser",
     "type": "library",
     "minimum-stability": "dev",
