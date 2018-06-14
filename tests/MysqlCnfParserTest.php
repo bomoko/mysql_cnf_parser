@@ -19,4 +19,10 @@ class MysqlCnfParserTest extends TestCase
         $this->assertArrayHasKey("included", $output);
     }
 
+    public function testParseCndWithIncludeDirectory()
+    {
+        $output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfIncludesDirectory.cnf");
+        $this->assertArrayHasKey("included", $output);
+    }
+
 }
