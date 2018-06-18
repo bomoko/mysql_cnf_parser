@@ -5,6 +5,7 @@ use Nette\Utils\Finder;
 
 class MysqlCnfParser
 {
+  const FILE_TYPES = ['*.cnf', '*.ini'];
 
     public static function parse($filename)
     {
@@ -60,9 +61,10 @@ class MysqlCnfParser
 
     protected static function parseDirectory($directoryName)
     {
-        $return = [];
 
-        foreach (Finder::findFiles('*.cnf')->in($directoryName) as $key => $file) {
+      $return = [];
+
+        foreach (Finder::findFiles(self::FILE_TYPES)->in($directoryName) as $key => $file) {
             $return = array_merge_recursive($return, self::parse($key));
         }
 
