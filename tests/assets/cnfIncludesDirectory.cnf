@@ -11,4 +11,4 @@ max_allowed_packet=8M
 [mysqldump]
 quick
 
-!includedir includes/*
+!includedir includes
