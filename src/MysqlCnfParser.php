@@ -1,9 +1,11 @@
 <?php
 
 namespace bomoko\MysqlCnfParser;
+use Nette\Utils\Finder;
 
 class MysqlCnfParser
 {
+  const FILE_TYPES = ['*.cnf', '*.ini'];
 
     public static function parse($filename)
     {
@@ -36,14 +38,36 @@ class MysqlCnfParser
         foreach ($includes as $include) {
             //strip any !include(s)
             $names = explode(" ", $include);
-            $name = $names[1];
-            if ($name[0] !== "/") {
-                $name = $includePath . "/{$name}";
-            }
-            if (file_exists($name) && is_readable($name)) {
-                $return = array_merge_recursive($return, self::parse($name));
-            }
+            $fileName = $names[1];
+            $includeType = $names[0];
+
+            $fileName = self::getAbsoluteDirectory($fileName, $includePath);
+
+            $return = array_merge_recursive($return,
+            $includeType == "!includedir" ? self::parseDirectory($fileName) : self::parse($fileName));
+
         }
+        return $return;
+    }
+
+    protected static function getAbsoluteDirectory($fileName,$includePath)
+    {
+        if ($fileName[0] !== "/") {
+            $fileName = $includePath . "/{$fileName}";
+        }
+
+        return $fileName;
+    }
+
+    protected static function parseDirectory($directoryName)
+    {
+
+      $return = [];
+
+        foreach (Finder::findFiles(self::FILE_TYPES)->in($directoryName) as $key => $file) {
+            $return = array_merge_recursive($return, self::parse($key));
+        }
+
         return $return;
     }
 
