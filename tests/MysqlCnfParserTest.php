@@ -33,4 +33,10 @@ class MysqlCnfParserTest extends TestCase
         $this->assertArrayHasKey("includedisini", $output["included"]);
     }
 
+    public function testDealWithSelfReferentialIncludes()
+    {
+        $output = MysqlCnfParser::parse(__DIR__ . "/assets/cnfInfiniteInclude.cnf");
+        $this->assertArrayHasKey("infinite", $output);
+    }
+
 }
