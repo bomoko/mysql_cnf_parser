@@ -50,7 +50,7 @@ class MysqlCnfParser
         return $return;
     }
 
-    protected static function getAbsoluteDirectory($fileName,$includePath)
+    protected static function getAbsoluteDirectory($fileName, $includePath)
     {
         if ($fileName[0] !== "/") {
             $fileName = $includePath . "/{$fileName}";
