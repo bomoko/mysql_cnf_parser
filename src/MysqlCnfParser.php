@@ -26,6 +26,7 @@ class MysqlCnfParser
             $contents = file_get_contents($filename);
             $contentArray = explode("\n", $contents);
             //go through the file and pop any "!include/!includedir" directives
+            $reader = new IniReader();
             $toParse = [];
             $includes = [];
             foreach ($contentArray as $line) {
@@ -37,7 +38,6 @@ class MysqlCnfParser
                     $toParse[] = $line;
                 }
             }
-            $reader = new IniReader();
 
             return array_merge_recursive(
                 $reader->readFile(implode("\n", $toParse), true),
