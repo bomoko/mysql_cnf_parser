@@ -4,7 +4,8 @@ namespace bomoko\MysqlCnfParser;
 
 use Nette\Utils\Finder;
 use Webmozart\PathUtil\Path;
-use \IniParser;
+use Indigophp\Ini;
+
 
 class MysqlCnfParser
 {
@@ -36,9 +37,10 @@ class MysqlCnfParser
                     $toParse[] = $line;
                 }
             }
+            $reader = new IniReader();
 
             return array_merge_recursive(
-                parse_ini_string(implode("\n", $toParse), true),
+                $reader->readFile(implode("\n", $toParse), true),
                 $this->processIncludes($includes,
                     Path::getDirectory($filename)));
         } else {

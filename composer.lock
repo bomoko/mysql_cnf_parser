@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42c9c41de0e333d324e6b795dc89ca06",
+    "content-hash": "238c187040a305fbc08357441284426a",
     "packages": [
+        {
+            "name": "indigophp/ini",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/indigophp/ini.git",
+                "reference": "182167ee30280b8f875aac252d6c8334f4d9aec2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/indigophp/ini/zipball/182167ee30280b8f875aac252d6c8334f4d9aec2",
+                "reference": "182167ee30280b8f875aac252d6c8334f4d9aec2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.5"
+            },
+            "require-dev": {
+                "coduo/phpspec-data-provider-extension": "^1.0",
+                "henrikbjorn/phpspec-code-coverage": "^1.0",
+                "phpspec/phpspec": "^2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Indigo\\Ini\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                }
+            ],
+            "description": "Provides better INI parsing and rendering",
+            "homepage": "http://indigophp.com",
+            "keywords": [
+                "ini",
+                "parser",
+                "renderer"
+            ],
+            "time": "2016-01-04T01:21:08+00:00"
+        },
         {
             "name": "nette/finder",
             "version": "dev-master",
@@ -146,43 +198,6 @@
                 "validation"
             ],
             "time": "2018-05-10T20:39:55+00:00"
-        },
-        {
-            "name": "tajawal/php-ini-parser",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tajawal/php-ini-parser.git",
-                "reference": "31962527d2a0241d4df41f426540698038e0b976"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tajawal/php-ini-parser/zipball/31962527d2a0241d4df41f426540698038e0b976",
-                "reference": "31962527d2a0241d4df41f426540698038e0b976",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "IniParser": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "IT Team",
-                    "email": "it@tajawal.com"
-                }
-            ],
-            "description": "A Zend_Config_Ini like parser for .ini files.",
-            "keywords": [
-                "configuration",
-                "ini"
-            ],
-            "time": "2017-02-16T14:40:09+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -1644,7 +1659,7 @@
     "stability-flags": {
         "nette/finder": 20,
         "webmozart/path-util": 20,
-        "tajawal/php-ini-parser": 20,
+        "indigophp/ini": 20,
         "phpunit/phpunit": 20
     },
     "prefer-stable": false,
