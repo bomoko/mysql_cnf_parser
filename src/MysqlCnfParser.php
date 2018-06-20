@@ -4,7 +4,7 @@ namespace bomoko\MysqlCnfParser;
 
 use Nette\Utils\Finder;
 use Webmozart\PathUtil\Path;
-
+use Tajawal\PhpIniParser\IniParser;
 class MysqlCnfParser
 {
 
