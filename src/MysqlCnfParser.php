@@ -4,7 +4,7 @@ namespace bomoko\MysqlCnfParser;
 
 use Nette\Utils\Finder;
 use Webmozart\PathUtil\Path;
-use Indigophp\Ini;
+use Indigo\Ini\Parser;
 
 
 class MysqlCnfParser
@@ -26,7 +26,7 @@ class MysqlCnfParser
             $contents = file_get_contents($filename);
             $contentArray = explode("\n", $contents);
             //go through the file and pop any "!include/!includedir" directives
-            $reader = new IniReader();
+            $parser = new Parser();
             $toParse = [];
             $includes = [];
             foreach ($contentArray as $line) {
@@ -40,7 +40,7 @@ class MysqlCnfParser
             }
 
             return array_merge_recursive(
-                $reader->readFile(implode("\n", $toParse), true),
+                $parser->parse(implode("\n", $toParse), true),
                 $this->processIncludes($includes,
                     Path::getDirectory($filename)));
         } else {
