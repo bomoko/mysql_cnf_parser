@@ -4,59 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "238c187040a305fbc08357441284426a",
+    "content-hash": "26661acb928e700e8571557e2c15d622",
     "packages": [
         {
-            "name": "indigophp/ini",
+            "name": "matomo/ini",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/indigophp/ini.git",
-                "reference": "182167ee30280b8f875aac252d6c8334f4d9aec2"
+                "url": "https://github.com/matomo-org/component-ini.git",
+                "reference": "ac25c899aefdbaca7e00a86367af24bd72aa1b4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/indigophp/ini/zipball/182167ee30280b8f875aac252d6c8334f4d9aec2",
-                "reference": "182167ee30280b8f875aac252d6c8334f4d9aec2",
+                "url": "https://api.github.com/repos/matomo-org/component-ini/zipball/ac25c899aefdbaca7e00a86367af24bd72aa1b4d",
+                "reference": "ac25c899aefdbaca7e00a86367af24bd72aa1b4d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.5"
+                "php": ">=5.3.3"
             },
             "require-dev": {
-                "coduo/phpspec-data-provider-extension": "^1.0",
-                "henrikbjorn/phpspec-code-coverage": "^1.0",
-                "phpspec/phpspec": "^2.4"
+                "athletic/athletic": "0.1.*",
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.3-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Indigo\\Ini\\": "src/"
+                    "Matomo\\Ini\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-3.0"
             ],
-            "authors": [
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com"
-                }
-            ],
-            "description": "Provides better INI parsing and rendering",
-            "homepage": "http://indigophp.com",
-            "keywords": [
-                "ini",
-                "parser",
-                "renderer"
-            ],
-            "time": "2016-01-04T01:21:08+00:00"
+            "time": "2018-02-14T18:57:44+00:00"
         },
         {
             "name": "nette/finder",
@@ -1659,7 +1640,7 @@
     "stability-flags": {
         "nette/finder": 20,
         "webmozart/path-util": 20,
-        "indigophp/ini": 20,
+        "matomo/ini": 20,
         "phpunit/phpunit": 20
     },
     "prefer-stable": false,

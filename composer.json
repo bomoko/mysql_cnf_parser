@@ -6,7 +6,7 @@
     "require": {
         "nette/finder": "^3.0@dev",
         "webmozart/path-util": "^2.3@dev",
-        "indigophp/ini": "^0.3.0@dev"
+        "matomo/ini": "dev-master"
     },
     "autoload": {
       "psr-4": {
