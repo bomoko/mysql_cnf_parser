@@ -4,6 +4,8 @@ namespace bomoko\MysqlCnfParser;
 
 use Nette\Utils\Finder;
 use Webmozart\PathUtil\Path;
+use Matomo\Ini\IniReader;
+
 
 class MysqlCnfParser
 {
@@ -24,6 +26,7 @@ class MysqlCnfParser
             $contents = file_get_contents($filename);
             $contentArray = explode("\n", $contents);
             //go through the file and pop any "!include/!includedir" directives
+            $reader = new IniReader();
             $toParse = [];
             $includes = [];
             foreach ($contentArray as $line) {
@@ -37,7 +40,7 @@ class MysqlCnfParser
             }
 
             return array_merge_recursive(
-                parse_ini_string(implode("\n", $toParse), true),
+                $reader->readString(implode("\n", $toParse), true),
                 $this->processIncludes($includes,
                     Path::getDirectory($filename)));
         } else {

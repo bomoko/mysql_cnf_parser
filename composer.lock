@@ -1,11 +1,44 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01159c33fdbc33a8761b1a23e111da15",
+    "content-hash": "26661acb928e700e8571557e2c15d622",
     "packages": [
+        {
+            "name": "matomo/ini",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matomo-org/component-ini.git",
+                "reference": "ac25c899aefdbaca7e00a86367af24bd72aa1b4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matomo-org/component-ini/zipball/ac25c899aefdbaca7e00a86367af24bd72aa1b4d",
+                "reference": "ac25c899aefdbaca7e00a86367af24bd72aa1b4d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "athletic/athletic": "0.1.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Matomo\\Ini\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "time": "2018-02-14T18:57:44+00:00"
+        },
         {
             "name": "nette/finder",
             "version": "dev-master",
@@ -66,7 +99,7 @@
                 "iterator",
                 "nette"
             ],
-            "time": "2018-05-10 20:37:51"
+            "time": "2018-05-10T20:37:51+00:00"
         },
         {
             "name": "nette/utils",
@@ -145,7 +178,7 @@
                 "utility",
                 "validation"
             ],
-            "time": "2018-05-10 20:39:55"
+            "time": "2018-05-10T20:39:55+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -195,7 +228,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-05-29 14:25:02"
+            "time": "2018-05-29T14:25:02+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -241,7 +274,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2016-08-15 15:31:42"
+            "time": "2016-08-15T15:31:42+00:00"
         }
     ],
     "packages-dev": [
@@ -298,7 +331,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2018-03-05 09:41:42"
+            "time": "2018-03-05T09:41:42+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -346,7 +379,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-06-03 10:06:13"
+            "time": "2018-06-03T10:06:13+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -401,7 +434,7 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
-            "time": "2017-04-07 07:07:10"
+            "time": "2017-04-07T07:07:10+00:00"
         },
         {
             "name": "phar-io/version",
@@ -663,7 +696,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-05-09 14:00:54"
+            "time": "2018-05-09T14:00:54+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -726,7 +759,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-06-01 07:51:50"
+            "time": "2018-06-01T07:51:50+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -773,7 +806,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2018-05-28 12:13:49"
+            "time": "2018-05-28T12:13:49+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -863,7 +896,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2018-06-04 07:17:52"
+            "time": "2018-06-04T07:17:52+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -912,7 +945,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2018-06-06 10:32:05"
+            "time": "2018-06-06T10:32:05+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -996,7 +1029,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-06-10 12:07:20"
+            "time": "2018-06-10T12:07:20+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1041,7 +1074,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2018-05-15 05:52:48"
+            "time": "2018-05-15T05:52:48+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -1105,7 +1138,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2018-05-23 07:33:54"
+            "time": "2018-05-23T07:33:54+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -1161,7 +1194,7 @@
                 "unidiff",
                 "unified diff"
             ],
-            "time": "2018-06-10 07:54:39"
+            "time": "2018-06-10T07:54:39+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -1211,7 +1244,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2018-05-15 05:48:40"
+            "time": "2018-05-15T05:48:40+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -1278,7 +1311,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2018-05-15 05:51:07"
+            "time": "2018-05-15T05:51:07+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -1329,7 +1362,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2018-05-15 05:52:33"
+            "time": "2018-05-15T05:52:33+00:00"
         },
         {
             "name": "sebastian/object-enumerator",
@@ -1376,7 +1409,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2018-05-15 05:52:18"
+            "time": "2018-05-15T05:52:18+00:00"
         },
         {
             "name": "sebastian/object-reflector",
@@ -1421,7 +1454,7 @@
             ],
             "description": "Allows reflection of object attributes, including inherited and non-public ones",
             "homepage": "https://github.com/sebastianbergmann/object-reflector/",
-            "time": "2018-05-15 05:50:44"
+            "time": "2018-05-15T05:50:44+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -1474,7 +1507,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2018-05-15 05:52:05"
+            "time": "2018-05-15T05:52:05+00:00"
         },
         {
             "name": "sebastian/resource-operations",
@@ -1516,7 +1549,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
-            "time": "2018-05-15 05:53:02"
+            "time": "2018-05-15T05:53:02+00:00"
         },
         {
             "name": "sebastian/version",
@@ -1607,6 +1640,7 @@
     "stability-flags": {
         "nette/finder": 20,
         "webmozart/path-util": 20,
+        "matomo/ini": 20,
         "phpunit/phpunit": 20
     },
     "prefer-stable": false,
