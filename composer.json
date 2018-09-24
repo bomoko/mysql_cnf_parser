@@ -3,6 +3,7 @@
     "description": ".cnf parser",
     "type": "library",
     "minimum-stability": "dev",
+    "license": "MIT",
     "require": {
         "nette/finder": "^3.0@dev",
         "webmozart/path-util": "^2.3@dev",
