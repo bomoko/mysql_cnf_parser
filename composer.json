@@ -5,7 +5,7 @@
     "minimum-stability": "dev",
     "license": "MIT",
     "require": {
-        "nette/finder": "^3.0@dev",
+        "nette/finder": "^2.5 || ^3.0@dev",
         "webmozart/path-util": "^2.3@dev",
         "matomo/ini": "dev-master"
     },
